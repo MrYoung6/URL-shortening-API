@@ -1,0 +1,315 @@
+form{
+    width: 67%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(257, 27%, 26%);
+    border-radius: 5px;
+    padding: 0;
+    background-image: url('../../../images/bg-shorten-desktop.svg');
+    /* margin: 50px auto 0px auto; */
+    left: 18%;
+    top: 87%;
+    position: absolute;
+    z-index: 2;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: row;
+    /* position: absolute;
+    z-index: 2; */
+  }
+  
+  /* .input-container {
+    display: flex;
+    align-items: center;
+  } */
+
+.link { 
+    width: 730px;
+    /* width: calc(100% - 30px); */
+    margin: 8px 0px;
+    padding: 15px 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    /* position: relative; */
+}
+
+[type="search"]::-webkit-search-cancel-button:hover {
+    cursor: pointer;
+}
+
+.link::placeholder {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+}
+
+.link.error {
+    /* border-color: red; */
+    outline-color: hsl(0, 100%, 67%);
+}
+
+.link.error::placeholder {
+    color:hsla(0, 100%, 66%, 0.5); /* Set placeholder color to red when error occurs */
+    font-weight: 500;
+}
+
+.shorten {
+    width: 150px;
+    margin-left: 15px;
+    background-color: hsl(180, 66%, 49%);
+    margin-top: 10px;
+    font-weight: 700;
+    color: white;
+    padding: 0;
+    font-size: 16px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+
+}
+
+.shorten:hover {
+    background-color: hsl(180, 53%, 68%);
+}
+
+.error-message {
+    color: hsl(0, 100%, 67%);
+    font-size: 14px;
+    font-weight: 400;
+    font-style: italic;
+    margin: 0;
+    padding: 0 0 0 3px;
+    align-self: flex-start;
+    width: 100%;
+  }
+
+  .urls-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    margin-top: 20px;
+    z-index: 11;
+    top: 107%;
+    left: 0%;
+
+  }
+
+.shortened-urls {
+    /* width: calc(100% - 30px); Adjusted width to fit within container */
+    width: 67%;
+    background-color: #fff; /* White background */
+    border-radius: 5px;
+    padding: 20px;
+    /* margin-top:140px; */
+    /* margin-right: 160px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visualization */
+    /* margin: 30px auto 0px auto; */
+    /* position: relative; */
+    /* top: 70; */
+    /* left: 10; */
+    display: flex; 
+    align-items: center;
+    text-align: left;
+    justify-content: space-between;
+    /* position: absolute; */
+    z-index: 11;
+    /* top: 107%; */
+    /* left: 15%; */
+    margin-bottom: 20px;
+}
+
+.shortened-urls > p {
+    font-size: 14px;
+    color: black;
+}
+
+.shortened-urls h2 {
+    margin-top: 0;
+}
+
+.shortened-urls ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+
+.shortened-url-item{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
+    color: hsl(180, 66%, 49%);
+}
+
+/* form:focus-within .shortened-urls{
+    display: flex;
+    flex-direction: row;
+} */
+
+
+.copy-icon {
+  margin-left: 30px;
+  margin-right: 5px;
+  margin-top: 0;
+  font-size: 100px;
+cursor: pointer;
+}
+
+.copy-btn{
+    width: 90px;
+    padding: 8px 8px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: hsl(180, 66%, 49%);
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    border: none;
+    border-radius: 3px;
+}
+
+.copy-btn:hover{
+    background-color: hsl(180, 53%, 68%);
+    cursor: pointer;
+}
+
+.close{
+    margin-left: 0px;
+    /* position: absolute; */
+    cursor: pointer;
+    color: gray; 
+}
+
+.close:hover{
+    color: red;
+}
+
+
+
+
+
+@media screen and (max-width: 1100px) {
+    form {
+        /* max-width: 430px; */
+        width: 85%;
+        left: 8%;
+        top: 102%;
+        background-image: url('../../../images/bg-shorten-mobile.svg');
+        background-position: right 0% top 0%;
+        background-repeat: no-repeat;
+        background-size: 75% 80%;
+        border-radius: 10px;
+        /* padding: 25px 0px; */
+        padding-top: 17px;
+        padding-bottom: 17px;
+        height: auto;
+    }
+
+    .form-container {
+        flex-direction: column;
+        align-items: center;
+        width: 87%;
+        /* padding: 25px 0px; */
+    }
+
+    .link {
+        width: 100%;
+        order: 1;
+    }
+
+    .error-message{
+        order: 2;
+    }
+
+    .shorten {
+        width: 100%;
+     padding: 12px 0;
+     margin-top: 5px;
+    margin-left: 0;
+    font-weight: 850;
+    font-size: 18px;
+    flex-wrap: wrap;
+    order: 3;
+    }
+
+    .urls-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 160px; /* Add some margin for spacing */
+        text-align: left;
+      }
+      
+
+    .shortened-urls{
+        width: 85%;
+        /* top: 68%; */
+        left: 0%;
+        flex-direction: column;
+        position: relative;
+    
+    }
+
+    .original {
+        width: 100%;
+        padding-bottom: 10px;
+        margin-top: 15px;
+        /* max-width: 660px; */
+        word-break: break-word;
+        border-bottom: solid 1px rgb(207, 206, 206);
+    }
+
+    .shortened-urls ul {
+        margin: 10px auto;
+        width: 100%;
+    }
+
+    .shortened-url-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .close {
+        position: absolute; /* Add absolute positioning */
+        top: 8px; /* Adjust as needed */
+        right: 7px; /* Adjust as needed */
+        font-size: 12px;
+    }
+
+    .copy-btn {
+        margin-top: 10px;
+        width: 100%;
+        align-self: center;
+        font-weight: 700;
+        font-size: medium;
+    }
+}
+
+@media screen and (min-width: 1101px) and (max-width: 1200px) {
+    form {
+        left: 8%;
+    }
+}
+
+@media screen and (min-width: 1201px) and (max-width: 1301px) {
+    form {
+        left: 10%;
+    }
+}
+
+@media screen and (min-width: 1101px) and (max-width: 1450px) {
+    form {
+        top: 60%;
+        width: 85%;
+        max-width: 935px;
+    }
+}

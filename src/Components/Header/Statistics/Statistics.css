@@ -1,0 +1,164 @@
+.stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(0, 0%, 95%);
+    margin-top: 156px;
+    padding-top: 50px;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.text{
+    padding-top: 180px;
+    margin-bottom: 100px;
+    width: 420px;
+    text-align: center;
+}
+
+.text > p {
+    font-weight: 500;
+}
+
+.advanced {
+    color: hsl(257, 27%, 26%);
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: 0;
+}
+
+.cards {
+    width: 307px;
+    height: 250px;
+    padding: 0px 25px 12px 23px;
+    background-color: white;
+    margin-right: 20px;
+    margin-bottom: 100px;
+    /* z-index: 0; */
+    /* position: relative; */
+}
+
+.pics-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -40px;
+    margin-bottom: 50px;
+    margin-left: 10px;
+    background-color:  hsl(257, 27%, 26%);
+    width: 75px;
+    padding: 20px;
+    border-radius: 50%;
+    /* border: none; */
+}
+
+.card-title {
+    color: hsl(260, 8%, 14%);
+}
+
+.records {
+    margin-top: 50px;
+}
+
+.custom {
+    margin-top: 100px;
+}
+
+.line {
+    position: absolute;
+    height: 5px;
+    width: 500px;
+    background-color: hsl(180, 66%, 49%);
+    z-index: -1;
+    top: 37%;
+    left: 25%;
+
+}
+/* .line {
+    position: absolute;
+    top: 50%;
+    left: 0; 
+    transform: translateY(-50%); 
+    height: 2px;
+    width: 100%;
+    background-color: hsl(180, 66%, 49%);
+    z-index: -1;
+} */
+
+
+
+
+@media screen and (max-width:1050px) {
+    .stats{
+     width: 100%;
+        /* max-width: 430px; */
+        align-items: center;
+    justify-content: center;
+    padding-top: 0;
+    }
+
+    .text{
+        width: 100%;
+        max-width: 430px;
+        /* margin-top: 200px; */
+    }
+
+    .advanced {
+        font-size: 26px;
+    }
+
+    .text > p {
+        padding-top: 15px;
+        width: 330px;
+        /* text-align: center; */
+        margin: 0 auto;
+
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center; /* Ensures cards are aligned centrally */
+        position: relative;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .cards{
+        margin: 50px auto;
+        width: 287px;
+
+    }
+
+    .card-title {
+        margin-bottom: 13px;
+    }
+
+ .cards > p {
+    font-size: 14px;
+    font-weight: 500;
+    width: 250px;
+ }
+
+    .pics-wrapper {
+        
+        margin-left: 36%;
+    }
+
+    .line {
+        position: absolute;
+        /* height: calc(100% - 40px); */
+        height: 800px;
+        width: 7px; /* Represents the thickness of the vertical line */
+        background-color: hsl(180, 66%, 49%);
+        z-index: -1;
+        top: 10%;
+        left: 50%; /* Aligns the line in the center horizontally */
+        transform: translateX(-50%); /* Ensures the line is centered */
+    }
+}

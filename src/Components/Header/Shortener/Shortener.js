@@ -42,6 +42,11 @@ export default function Shortener() {
     localStorage.setItem('shortenedURLs', JSON.stringify(shortenedURLs));
   }, [shortenedURLs]);
 
+  function isValidURL(url) {
+    const urlRegex = /^(ftp|http|https):\/\/[^ "]+$/;
+    return urlRegex.test(url);
+  }
+
 
   function getLink() {
 
@@ -72,8 +77,10 @@ export default function Shortener() {
   }
 
   useEffect(() => {
+    
     getLink();
   }, []);
+
 
   function handleSubmit(event) {
     event.preventDefault();

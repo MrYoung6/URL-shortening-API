@@ -10,7 +10,7 @@ export default function TopInfo() {
         <p>Build your brand's recognition and get detailed insights on how your links are performing.</p>
         <button>Get Started</button>
         </div>
-        <img src={Desk}/>
+        <img  alt='worker' src={Desk}/>
     </div>
   )
 }

@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <div className='footer-container'>
         <section className='left-section'>
-            <img src={FLogo} />
+            <img src={FLogo} alt="Logo" />
         </section>
         <section className='middle-section'>
             <ul className='middle-lists'>
@@ -40,16 +40,16 @@ export default function Footer() {
         <section className='right-section'>
             <ul className='right-lists'>
                 <li>
-                    <img className='social' src={Facebook} />
+                    <img className='social' alt='facebook' src={Facebook} />
                 </li>
                 <li>
-                    <img className='social' src={Twitter} />
+                    <img className='social' alt="Twitter"src={Twitter} />
                 </li>
                 <li>
-                   <img className='social' src={Pinterest} />
+                   <img className='social' alt='Pinterest' src={Pinterest} />
                 </li>
                 <li>
-                   <img className='social' src={Instagram}/>
+                   <img className='social' alt='Instagram' src={Instagram}/>
                 </li>
             </ul>
         </section>

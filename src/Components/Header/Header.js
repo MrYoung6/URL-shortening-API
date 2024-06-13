@@ -38,7 +38,7 @@ export default function Header() {
         <div className="header">
            
             <article> 
-            <img src={Logo} className="logo"/>
+            <img src={Logo} alt="logo" className="logo"/>
             <nav className="nav-bar" style={{display: menuOpen || windowWidth > 900 ? "flex" : "none"}}>
 
                  <ul>

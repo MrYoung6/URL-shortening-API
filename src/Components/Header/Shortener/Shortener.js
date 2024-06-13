@@ -47,33 +47,7 @@ export default function Shortener() {
     return urlRegex.test(url);
   }
 
-  function getLink() {
-
-    if (!isValidURL(search)) {
-      setError("Please add a link");
-      return;
-    }
-
-    console.log("Fetching data...");
-    fetch(url, requestOptions)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then(data => {
-        console.log('Shortened URL:', data.shrtlnk);
-        setShortenedURLs(prevURLs => [{ original: search, short: data.shrtlnk }, ...prevURLs]);
-        setSearchedURL(search);
-        setError(null);
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        setError('Failed to shorten URL');
-      });
-
-  }
+ 
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -85,8 +59,35 @@ export default function Shortener() {
   }
 
   useEffect(() => {
+    function getLink() {
+
+      if (!isValidURL(search)) {
+        setError("Please add a link");
+        return;
+      }
+  
+      console.log("Fetching data...");
+      fetch(url, requestOptions)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data => {
+          console.log('Shortened URL:', data.shrtlnk);
+          setShortenedURLs(prevURLs => [{ original: search, short: data.shrtlnk }, ...prevURLs]);
+          setSearchedURL(search);
+          setError(null);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          setError('Failed to shorten URL');
+        });
+  
+    }
     getLink();
-  }, [getLink]);
+  }, []);
 
   async function copyToClip(event, url) {
     try {

@@ -42,12 +42,38 @@ export default function Shortener() {
     localStorage.setItem('shortenedURLs', JSON.stringify(shortenedURLs));
   }, [shortenedURLs]);
 
-  function isValidURL(url) {
-    const urlRegex = /^(ftp|http|https):\/\/[^ "]+$/;
-    return urlRegex.test(url);
+
+  function getLink() {
+
+    if (!isValidURL(search)) {
+      setError("Please add a link");
+      return;
+    }
+
+    console.log("Fetching data...");
+    fetch(url, requestOptions)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log('Shortened URL:', data.shrtlnk);
+        setShortenedURLs(prevURLs => [{ original: search, short: data.shrtlnk }, ...prevURLs]);
+        setSearchedURL(search);
+        setError(null);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        setError('Failed to shorten URL');
+      });
+
   }
 
- 
+  useEffect(() => {
+    getLink();
+  }, []);
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -57,37 +83,6 @@ export default function Shortener() {
     }
     getLink();
   }
-
-  useEffect(() => {
-    function getLink() {
-
-      if (!isValidURL(search)) {
-        setError("Please add a link");
-        return;
-      }
-  
-      console.log("Fetching data...");
-      fetch(url, requestOptions)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          return response.json();
-        })
-        .then(data => {
-          console.log('Shortened URL:', data.shrtlnk);
-          setShortenedURLs(prevURLs => [{ original: search, short: data.shrtlnk }, ...prevURLs]);
-          setSearchedURL(search);
-          setError(null);
-        })
-        .catch(error => {
-          console.error('Error:', error);
-          setError('Failed to shorten URL');
-        });
-  
-    }
-    getLink();
-  }, []);
 
   async function copyToClip(event, url) {
     try {

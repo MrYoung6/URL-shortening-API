@@ -1,6 +1,5 @@
 import React from 'react'
 import Logo from '../../images/logo.svg'
-import Menu from '../../images/menu-outline.svg'
 import { useState, useEffect} from 'react'
 import './Header.css'
 

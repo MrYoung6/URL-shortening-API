@@ -86,7 +86,7 @@ export default function Shortener() {
 
   useEffect(() => {
     getLink();
-  }, []);
+  }, [getLink]);
 
   async function copyToClip(event, url) {
     try {

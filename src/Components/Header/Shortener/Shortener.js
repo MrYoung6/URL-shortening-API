@@ -77,9 +77,8 @@ export default function Shortener() {
   }
 
   useEffect(() => {
-    
     getLink();
-  }, []);
+  }, [getLink]);
 
 
   function handleSubmit(event) {

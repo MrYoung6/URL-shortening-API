@@ -14,7 +14,7 @@
 .text{
     padding-top: 180px;
     margin-bottom: 100px;
-    width: 420px;
+    width: 26.2rem;
     text-align: center;
 }
 
@@ -34,8 +34,8 @@
 }
 
 .cards {
-    width: 307px;
-    height: 250px;
+    width: 19.1rem;
+    height: 15.6rem;
     padding: 0px 25px 12px 23px;
     background-color: white;
     margin-right: 20px;
@@ -52,7 +52,7 @@
     margin-bottom: 50px;
     margin-left: 10px;
     background-color:  hsl(257, 27%, 26%);
-    width: 75px;
+    width: 4.6rem;
     padding: 20px;
     border-radius: 50%;
     /* border: none; */
@@ -72,8 +72,8 @@
 
 .line {
     position: absolute;
-    height: 5px;
-    width: 500px;
+    height: 0.3rem;
+    width: 31.2rem;
     background-color: hsl(180, 66%, 49%);
     z-index: -1;
     top: 37%;
@@ -105,17 +105,17 @@
 
     .text{
         width: 100%;
-        max-width: 430px;
+        max-width: 26.8rem;
         /* margin-top: 200px; */
     }
 
     .advanced {
-        font-size: 26px;
+        font-size: 1.6rem;
     }
 
     .text > p {
         padding-top: 15px;
-        width: 330px;
+        width: 20.6rem;
         /* text-align: center; */
         margin: 0 auto;
 
@@ -131,7 +131,7 @@
 
     .cards{
         margin: 50px auto;
-        width: 287px;
+        width: 17.9rem;
 
     }
 
@@ -140,9 +140,9 @@
     }
 
  .cards > p {
-    font-size: 14px;
+    font-size: 0.8rem;
     font-weight: 500;
-    width: 250px;
+    width: 15.6rem;
  }
 
     .pics-wrapper {
@@ -153,7 +153,7 @@
     .line {
         position: absolute;
         /* height: calc(100% - 40px); */
-        height: 800px;
+        height: 50rem;
         width: 7px; /* Represents the thickness of the vertical line */
         background-color: hsl(180, 66%, 49%);
         z-index: -1;

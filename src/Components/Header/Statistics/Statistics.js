@@ -35,7 +35,6 @@ export default function Statistics() {
                     <h3 className='card-title'>Fully Customizable</h3>
                     <p> Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p>
                 </div>
-                {/* <div className='line'></div> */}
             </div>
         </div>
     )

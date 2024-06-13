@@ -12,12 +12,9 @@ const url = "https://shrtlnk.dev/api/v2/link"
 export default function Shortener() {
 
   const [search, setSearch] = useState("");
-  // const [searchTerm, setSearchTerm] = useState("");
   const [shortenedURLs, setShortenedURLs] = useState([]);
   const [error, setError] = useState(null);
   const [searchedURL, setSearchedURL] = useState("");
-  // const [showShortenedURL, setShowShortenedURL] = useState(false);
-  // const [isFocused, setIsFocused] = useState(false);
   const displayLimit = 4;
 
   const requestData = {
@@ -35,7 +32,6 @@ export default function Shortener() {
   };
 
   useEffect(() => {
-    // Retrieve shortened URLs from localStorage when the component mounts
     const storedURLs = localStorage.getItem('shortenedURLs');
     if (storedURLs) {
       setShortenedURLs(JSON.parse(storedURLs));
@@ -43,7 +39,6 @@ export default function Shortener() {
   }, []);
 
   useEffect(() => {
-    // Store shortened URLs in localStorage whenever they change
     localStorage.setItem('shortenedURLs', JSON.stringify(shortenedURLs));
   }, [shortenedURLs]);
 
@@ -69,15 +64,9 @@ export default function Shortener() {
       })
       .then(data => {
         console.log('Shortened URL:', data.shrtlnk);
-        // setShortenedURLs([...shortenedURLs, data.shrtlnk]);
         setShortenedURLs(prevURLs => [{ original: search, short: data.shrtlnk }, ...prevURLs]);
-        // setShortenedURLs(prevURLs => [...prevURLs, { original: search, short: data.shrtlnk }]);
-        // setShortenedURLs([data.shrtlnk]);
-        // setShortenedURLs(data.shrtlnk);
         setSearchedURL(search);
         setError(null);
-        // setSearch(""); 
-        // setShowShortenedURL(true);
       })
       .catch(error => {
         console.error('Error:', error);
@@ -94,14 +83,6 @@ export default function Shortener() {
     }
     getLink();
   }
-
-  // useEffect(() => {
-  //     getLink(); // Call getLink once when the component mounts
-  // }, [setError]);
-
-  //   useEffect(() => {
-  //     getLink();
-  // }, [search]);
 
   useEffect(() => {
     getLink();
@@ -121,43 +102,12 @@ export default function Shortener() {
     }
   }
 
-  // async function copyToClip(url) {
-
-
-  //   try {
-  //     await navigator.clipboard.writeText(url);
-  //     const buttons = document.getElementsByClassName('copy-btn');
-  //     for (let button of buttons) {
-  //       button.innerHTML = 'Copied!';
-  //       button.style.backgroundColor = 'hsl(257, 27%, 26%)';
-  //     }
-   
-  //   } catch (err) {
-  //     console.error(
-  //       "Unable to copy to clipboard.",
-  //       err
-  //     );
-  //     alert("Copy to clipboard failed.");
-  //   }
-  // }
-
-  // async function copyToClip(e, url) {
-  //   try {
-  //     e.preventDefault(); // Prevent the default behavior
-  //     await handleClick(e, url);
-  //   } catch (err) {
-  //     console.error("Unable to copy to clipboard.", err);
-  //     alert("Copy to clipboard failed.");
-  //   }
-  // }
-
-
   function deleteURL(index) {
     setShortenedURLs(prevURLs => prevURLs.filter((_, i) => i !== index));
   }
 
   useEffect(() => {
-    setError(null); // Clear error when component mounts
+    setError(null);
   }, []);
 
   return (
@@ -177,7 +127,6 @@ export default function Shortener() {
           />
         {error && <p className="error-message">{error}</p>}
           <button
-            // onClick={getLink}
             type="submit"
             className='shorten'
           >Shorten it!

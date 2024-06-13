@@ -12,11 +12,10 @@ export default function Header() {
         const handleResize = () => {
             setWindowWidth(window.innerWidth);
             if (window.innerWidth > 900) {
-                setMenuOpen(false);  // Close the menu on larger screens
+                setMenuOpen(false); 
             }
         };
         window.addEventListener('resize', handleResize);
-        // handleResize(); // Initial check
         return () => {
             window.removeEventListener('resize', handleResize);
         };
@@ -33,9 +32,6 @@ export default function Header() {
         color: 'gray',
     };
 
-    // const displayStyle = {
-    //     display: menuOpen || window.innerWidth > 900 ? 'flex' : 'none'
-    // };
 
   return (
 
@@ -44,7 +40,6 @@ export default function Header() {
             <article> 
             <img src={Logo} className="logo"/>
             <nav className="nav-bar" style={{display: menuOpen || windowWidth > 900 ? "flex" : "none"}}>
-            {/* <img src={Logo} className="logo"/> */}
 
                  <ul>
                     <li>Features</li>
@@ -58,27 +53,13 @@ export default function Header() {
                 <button className='btn-right'>Sign Up</button>
             </div>
             
-            {/* <img src={Menu} 
-            className="burger"
-            alt='Menu'
-            style={menuStyle}
-            onClick={() => {
-                console.log("Before state change:", menuOpen);
-                setMenuOpen(!menuOpen);
-                console.log("After state change:", menuOpen);
-                // setMenuOpen(prevMenuOpen => !prevMenuOpen);
-                // menuOpen = !menuOpen;
-            }}
-             /> */}
+           
              <svg 
                 xmlns="http://www.w3.org/2000/svg" 
                 className="burger" 
                 viewBox="0 0 512 512" 
                 style={menuStyle} 
                 onClick={() => {
-                    // console.log("Before state change:", menuOpen);
-                    // setMenuOpen(!menuOpen);
-                    // console.log("After state change:", menuOpen);
                    setMenuOpen(prevMenuOpen => !prevMenuOpen)
                 }}
             >

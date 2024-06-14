@@ -25,9 +25,16 @@ Users should be able to:
 - Receive an error message when the `form` is submitted if:
   - The `input` field is empty
 
-### Screenshot
+### Screenshots
 
-![Desktop](./src/images/URL shortening API (1).png)
+#### Desktop
+
+![URL shortening API (1)](https://github.com/MrYoung6/URL-shortening-API/assets/141578478/4295da6c-3b87-4bc8-9e48-8f6031e54553)
+
+#### Mobile
+
+![localhost_3000_ (1)](https://github.com/MrYoung6/URL-shortening-API/assets/141578478/869fedcb-96ca-4219-8306-37c6d968e633)
+
 
 
 ### Links

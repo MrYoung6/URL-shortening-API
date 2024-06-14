@@ -8,7 +8,6 @@
     padding: 3px 120px;
     position: relative;
     overflow: hidden;
-    /* background-color: transparent; */
 }
 
 .left-top {
@@ -19,22 +18,22 @@
     margin-left: 30px;
 }
 
-.left-top > h1 {
+.left-top>h1 {
     color: hsl(257, 27%, 26%);
     font-size: 3.6rem;
     margin-bottom: 0;
 }
 
-.left-top > p {
+.left-top>p {
     margin-top: 0;
     margin-bottom: 20px;
     width: 27.5rem;
     font-weight: 500;
 }
 
-.left-top > button {
+.left-top>button {
     width: 9.3rem;
-    background-color:  hsl(180, 66%, 49%);
+    background-color: hsl(180, 66%, 49%);
     color: white;
     border: none;
     padding: 8px 12px;
@@ -45,20 +44,20 @@
     cursor: pointer;
 }
 
-.left-top > button:hover {
+.left-top>button:hover {
     background-color: hsl(180, 53%, 68%);
 }
 
-.top > img {
+.top>img {
     height: 31.2rem;
     width: 55%;
-   margin-top: 30px;
-   position: absolute;
-   right: -10%;
+    margin-top: 30px;
+    position: absolute;
+    right: -10%;
 }
 
-@media screen and (min-width: 320px) and (max-width: 370px){
-    .top > img {
+@media screen and (min-width: 320px) and (max-width: 370px) {
+    .top>img {
         width: 27.5rem;
         height: auto;
         max-width: 28.7rem;
@@ -68,8 +67,8 @@
 }
 
 
-@media screen and (min-width: 371px ) and (max-width: 401px) {
-    .top > img {
+@media screen and (min-width: 371px) and (max-width: 401px) {
+    .top>img {
         width: 27.5rem;
         height: auto;
         top: -4%;
@@ -80,7 +79,7 @@
 
 
 @media screen and (min-width: 402px) and (max-width: 442px) {
-    .top > img {
+    .top>img {
         width: 27.5rem;
         height: auto;
         top: -4%;
@@ -88,8 +87,8 @@
     }
 }
 
-@media screen and (min-width: 443px) and (max-width: 540px){
-    .top > img {
+@media screen and (min-width: 443px) and (max-width: 540px) {
+    .top>img {
         width: 27.5rem;
         height: auto;
         top: -4%;
@@ -97,8 +96,8 @@
     }
 }
 
-@media screen and (min-width: 541px) and (max-width: 641px ) {
-    .top > img {
+@media screen and (min-width: 541px) and (max-width: 641px) {
+    .top>img {
         width: 27.5rem;
         height: auto;
         top: -4%;
@@ -109,7 +108,7 @@
 @media screen and (min-width: 642px) and (max-width: 1100px) {
 
 
-    .top > img {
+    .top>img {
         width: 27.5rem;
         height: auto;
         top: -4%;
@@ -119,13 +118,13 @@
 
 
 
-@media screen  and (min-width: 320px )and (max-width: 1100px) {
-    .top{
+@media screen and (min-width: 320px)and (max-width: 1100px) {
+    .top {
         flex-direction: column;
-         padding: auto;
+        padding: auto;
         align-items: center;
         height: auto;
-    background-color: transparent;
+        background-color: transparent;
 
     }
 
@@ -138,18 +137,18 @@
 
     }
 
-    .left-top > h1 {
+    .left-top>h1 {
         font-size: 2.5rem;
         width: 300px;
 
     }
 
-    .left-top > p {
+    .left-top>p {
         width: 300px;
         max-width: 420px;
     }
 
-    .left-top > button {
+    .left-top>button {
         font-size: 18px;
         padding: 12px 12px;
         width: 180px;

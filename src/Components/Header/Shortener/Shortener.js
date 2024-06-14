@@ -78,7 +78,7 @@ export default function Shortener() {
 
   useEffect(() => {
     getLink();
-  }, [getLink]);
+  }, []);
 
 
   function handleSubmit(event) {
@@ -127,33 +127,33 @@ export default function Shortener() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
-        {error && <p className="error-message">{error}</p>}
+          {error && <p className="error-message">{error}</p>}
           <button
             type="submit"
             className='shorten'
           >Shorten it!
           </button>
         </div>
-        </form>
-    <div className='urls-container'>
-      {searchedURL && shortenedURLs.slice(0, displayLimit).map((url, index) => (
+      </form>
+      <div className='urls-container'>
+        {searchedURL && shortenedURLs.slice(0, displayLimit).map((url, index) => (
           <div className="shortened-urls" key={index}>
-            
+
             <p className='original'>{url.original}</p>
             <ul>
               <li className="shortened-url-item">
                 {url.short}
-                <button className="copy-btn" onClick={(event) => copyToClip(event,url.short)}>Copy</button>
+                <button className="copy-btn" onClick={(event) => copyToClip(event, url.short)}>Copy</button>
                 <CloseIcon className='close' onClick={() => deleteURL(index)} />
               </li>
             </ul>
 
           </div>
 
-      ))}
+        ))}
+      </div>
     </div>
-</div>
   )
- }
+}
 
 

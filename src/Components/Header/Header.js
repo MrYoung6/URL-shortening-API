@@ -1,6 +1,6 @@
 import React from 'react'
 import Logo from '../../images/logo.svg'
-import { useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 import './Header.css'
 
 export default function Header() {
@@ -11,7 +11,7 @@ export default function Header() {
         const handleResize = () => {
             setWindowWidth(window.innerWidth);
             if (window.innerWidth > 900) {
-                setMenuOpen(false); 
+                setMenuOpen(false);
             }
         };
         window.addEventListener('resize', handleResize);
@@ -32,41 +32,41 @@ export default function Header() {
     };
 
 
-  return (
+    return (
 
         <div className="header">
-           
-            <article> 
-            <img src={Logo} alt="logo" className="logo"/>
-            <nav className="nav-bar" style={{display: menuOpen || windowWidth > 900 ? "flex" : "none"}}>
 
-                 <ul>
-                    <li>Features</li>
-                    <li>Pricing</li>
-                    <li>Resources</li>
-                </ul>
-            </nav>
+            <article>
+                <img src={Logo} alt="logo" className="logo" />
+                <nav className="nav-bar" style={{ display: menuOpen || windowWidth > 900 ? "flex" : "none" }}>
+
+                    <ul>
+                        <li>Features</li>
+                        <li>Pricing</li>
+                        <li>Resources</li>
+                    </ul>
+                </nav>
             </article>
-            <div className='buttons'style={{display: menuOpen || windowWidth > 900 ? "flex" : "none"}}>
+            <div className='buttons' style={{ display: menuOpen || windowWidth > 900 ? "flex" : "none" }}>
                 <button className='btn-left'>Login</button>
                 <button className='btn-right'>Sign Up</button>
             </div>
-            
-           
-             <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                className="burger" 
-                viewBox="0 0 512 512" 
-                style={menuStyle} 
+
+
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="burger"
+                viewBox="0 0 512 512"
+                style={menuStyle}
                 onClick={() => {
-                   setMenuOpen(prevMenuOpen => !prevMenuOpen)
+                    setMenuOpen(prevMenuOpen => !prevMenuOpen)
                 }}
             >
-                <path fill="none" stroke="currentColor" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="32" d="M80 160h352M80 256h352M80 352h352"/>
+                <path fill="none" stroke="currentColor" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="32" d="M80 160h352M80 256h352M80 352h352" />
             </svg>
-           
+
         </div>
 
-  )
+    )
 }
 

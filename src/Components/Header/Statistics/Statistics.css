@@ -11,14 +11,14 @@
     height: auto;
 }
 
-.text{
+.text {
     padding-top: 180px;
     margin-bottom: 100px;
     width: 26.2rem;
     text-align: center;
 }
 
-.text > p {
+.text>p {
     font-weight: 500;
 }
 
@@ -40,8 +40,6 @@
     background-color: white;
     margin-right: 20px;
     margin-bottom: 100px;
-    /* z-index: 0; */
-    /* position: relative; */
 }
 
 .pics-wrapper {
@@ -51,11 +49,10 @@
     margin-top: -40px;
     margin-bottom: 50px;
     margin-left: 10px;
-    background-color:  hsl(257, 27%, 26%);
+    background-color: hsl(257, 27%, 26%);
     width: 4.6rem;
     padding: 20px;
     border-radius: 50%;
-    /* border: none; */
 }
 
 .card-title {
@@ -80,56 +77,44 @@
     left: 25%;
 
 }
-/* .line {
-    position: absolute;
-    top: 50%;
-    left: 0; 
-    transform: translateY(-50%); 
-    height: 2px;
-    width: 100%;
-    background-color: hsl(180, 66%, 49%);
-    z-index: -1;
-} */
+
 
 
 
 
 @media screen and (max-width:1050px) {
-    .stats{
-     width: 100%;
-        /* max-width: 430px; */
+    .stats {
+        width: 100%;
         align-items: center;
-    justify-content: center;
-    padding-top: 0;
+        justify-content: center;
+        padding-top: 0;
     }
 
-    .text{
+    .text {
         width: 100%;
         max-width: 26.8rem;
-        /* margin-top: 200px; */
     }
 
     .advanced {
         font-size: 1.6rem;
     }
 
-    .text > p {
+    .text>p {
         padding-top: 15px;
         width: 20.6rem;
-        /* text-align: center; */
         margin: 0 auto;
 
     }
 
     .card-container {
         flex-direction: column;
-        align-items: center; /* Ensures cards are aligned centrally */
+        align-items: center;
         position: relative;
         text-align: center;
         padding-bottom: 20px;
     }
 
-    .cards{
+    .cards {
         margin: 50px auto;
         width: 17.9rem;
 
@@ -139,26 +124,25 @@
         margin-bottom: 13px;
     }
 
- .cards > p {
-    font-size: 0.8rem;
-    font-weight: 500;
-    width: 15.6rem;
- }
+    .cards>p {
+        font-size: 0.8rem;
+        font-weight: 500;
+        width: 15.6rem;
+    }
 
     .pics-wrapper {
-        
+
         margin-left: 36%;
     }
 
     .line {
         position: absolute;
-        /* height: calc(100% - 40px); */
         height: 50rem;
-        width: 7px; /* Represents the thickness of the vertical line */
+        width: 7px;
         background-color: hsl(180, 66%, 49%);
         z-index: -1;
         top: 10%;
-        left: 50%; /* Aligns the line in the center horizontally */
-        transform: translateX(-50%); /* Ensures the line is centered */
+        left: 50%;
+        transform: translateX(-50%);
     }
 }

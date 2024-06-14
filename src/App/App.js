@@ -9,12 +9,12 @@ import Footer from '../Components/Header/Footer/Footer';
 function App() {
   return (
     <div className="App">
-      <Header/>
-      <TopInfo/>
-      <Shortener/>
-      <Statistics/>
-      <Boost/>
-      <Footer/>
+      <Header />
+      <TopInfo />
+      <Shortener />
+      <Statistics />
+      <Boost />
+      <Footer />
     </div>
   );
 }

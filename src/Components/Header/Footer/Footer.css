@@ -6,11 +6,11 @@
     height: 18.7rem;
 }
 
-.left-section{
+.left-section {
     padding: 70px 300px 0px 150px;
 }
 
-.middle-section{
+.middle-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,7 +18,7 @@
     margin-right: 30px;
 }
 
-.middle-lists > h3 {
+.middle-lists>h3 {
     color: #fff;
     padding-bottom: 20px;
     font-weight: 700;
@@ -28,11 +28,11 @@
     list-style: none;
 }
 
-.middle-lists > li {
+.middle-lists>li {
     margin-bottom: 7px;
 }
 
-.middle-lists > li:hover {
+.middle-lists>li:hover {
     color: hsl(180, 66%, 49%);
     cursor: pointer;
 
@@ -55,37 +55,37 @@
     margin-right: 100px;
 }
 
-.right-lists > li {
+.right-lists>li {
     margin-left: 20px;
 
 }
 
 .social:hover {
-    fill:hsl(180, 66%, 49%);
+    fill: hsl(180, 66%, 49%);
     cursor: pointer;
 }
 
 @media screen and (max-width:1410px) {
-    .footer-container{
+    .footer-container {
         width: 100%;
         flex-direction: column;
         height: auto;
         text-align: center;
     }
 
-    .middle-section{
+    .middle-section {
         margin-right: 0;
-        padding-top: 40px ;
+        padding-top: 40px;
     }
 
     .left-section {
         width: 100%;
-        padding: 40px 20px 15px 20px ;
+        padding: 40px 20px 15px 20px;
     }
 
     .right-section {
         width: 100%;
-        margin-left: 0 ;
+        margin-left: 0;
         justify-content: center;
     }
 
@@ -97,4 +97,3 @@
     }
 
 }
-

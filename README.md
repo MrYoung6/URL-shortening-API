@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](./src/images/URL shortening API (1).png)
-<img src="URL shortening API (1).png"/>
+![Desktop](./src/images/URL shortening API (1).png)
+
 
 ### Links
 

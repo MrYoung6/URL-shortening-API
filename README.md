@@ -33,7 +33,8 @@ Users should be able to:
 
 #### Mobile
 
-![URL shortening API (2)](https://github.com/MrYoung6/URL-shortening-API/assets/141578478/879c9204-6c89-457d-8603-0cd909b5d179)
+![localhost_3000_ (1)](https://github.com/MrYoung6/URL-shortening-API/assets/141578478/869fedcb-96ca-4219-8306-37c6d968e633)
+
 
 
 ### Links
